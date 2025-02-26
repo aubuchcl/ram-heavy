@@ -103,7 +103,7 @@
                     }
                 }
             }
-        }
+        },
         "redis": {
             "name": "redis",
             "stateful": false,
