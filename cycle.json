@@ -46,7 +46,7 @@
                 "origin": {
                     "type": "docker-file",
                     "details": {
-                        "build_file": "/Dockerfile",
+                        "build_file": "/df/Dockerfile",
                         "context_dir": "/"
                     }
                 }
@@ -79,7 +79,7 @@
                 "origin": {
                     "type": "docker-file",
                     "details": {
-                        "build_file": "/Dockerfile",
+                        "build_file": "/dftwo/Dockerfile",
                         "context_dir": "/"
                     }
                 }
