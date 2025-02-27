@@ -1,15 +1,20 @@
-FROM node:latest
+FROM ruby:latest
 
-# Install random global Node.js packages
-RUN npm install -g \
-    cowsay \
+# Install random Ruby gems globally
+RUN gem install \
+    lolcat \
     figlet \
-    nodemon \
-    http-server \
-    zx \
-    speed-test \
-    live-server \
-    json-server \
-    npm-check
+    httparty \
+    t \
+    neofetch \
+    json \
+    colorize \
+    lunchy \
+    sinatra
+
+# Verify installation
+RUN echo "Hello from Ruby!" | lolcat && figlet "Ruby Docker"
+
+CMD ["bash"]
 
 
