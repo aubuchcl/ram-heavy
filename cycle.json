@@ -5,39 +5,6 @@
         "version": "1.0.0"
     },
     "containers": {
-        "api133": {
-            "name": "api13234233",
-            "stateful": false,
-            "image": {
-                "name": "api1",
-                "origin": {
-                    "type": "docker-file",
-                    "details": {
-                        "build_file": "/python.Dockerfile",
-                        "context_dir": "/"
-                    }
-                }
-            },
-            "config": {
-                "network": {
-                    "hostname": "api234234",
-                    "ports": ["80:5000", "443:5000"],
-                    "public": "enable"
-                },
-                "deploy": {
-                    "instances": 1,
-                    "strategy": "first-available",
-                    "health_check": {
-                        "command": "./health-check.sh",
-                        "delay": "15s",
-                        "interval": "15s",
-                        "retries": 3,
-                        "restart": true,
-                        "timeout": "30s"
-                    }
-                }
-            }
-        },
         "api13234": {
             "name": "api13234234",
             "stateful": false,
