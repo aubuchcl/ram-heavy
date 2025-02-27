@@ -11,7 +11,3 @@ RUN pip install --no-cache-dir \
     visidata \
     youtube-dl
 
-# Verify installation
-RUN cowsay "Hello from Python!" && figlet "Python Docker"
-
-CMD ["bash"]
