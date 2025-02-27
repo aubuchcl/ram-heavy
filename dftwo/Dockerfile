@@ -4,12 +4,11 @@ FROM ruby:latest
 RUN apt-get update && apt-get install -y figlet neofetch
 
 # Install random Ruby gems globally (excluding `neofetch` and `t`)
-RUN gem install \
-    lolcat \
-    httparty \
-    json \
-    colorize \
-    lunchy \
-    sinatra
+RUN gem install lolcat
+RUN gem install httparty
+RUN gem install  json
+RUN gem install colorize
+RUN gem install lunchy
+RUN gem install sinatra
 
 
