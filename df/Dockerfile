@@ -3,7 +3,6 @@ FROM python:latest
 # Install random Python packages globally
 RUN pip install --no-cache-dir \
     cowsay \
-    figlet \
     httpie \
     speedtest-cli \
     glances \
