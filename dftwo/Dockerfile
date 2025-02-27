@@ -11,9 +11,4 @@ RUN gem install \
     lunchy \
     sinatra
 
-# Verify installation
-RUN echo "Hello from Ruby!" | lolcat && figlet "Ruby Docker"
-
-CMD ["bash"]
-
 
