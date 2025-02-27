@@ -1,19 +1,15 @@
-FROM ubuntu:22.04
+FROM node:latest
 
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    git \
-    build-essential \
-    cmake \
-    python3 \
-    ninja-build \
-    clang
+# Install random global Node.js packages
+RUN npm install -g \
+    cowsay \
+    figlet \
+    nodemon \
+    http-server \
+    yarn \
+    zx \
+    speed-test \
+    live-server \
+    json-server \
+    npm-check
 
-# Clone and build LLVM (Consumes ~8GB RAM during build)
-WORKDIR /llvm
-RUN git clone --depth=1 https://github.com/llvm/llvm-project.git
-WORKDIR /llvm/llvm-project/build
-RUN cmake -G Ninja ../llvm -DCMAKE_BUILD_TYPE=Release
-RUN ninja -j$(nproc)  # This will use a lot of RAM
-
-CMD ["bash"]
