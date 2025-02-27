@@ -1,14 +1,18 @@
-FROM node:latest
+FROM python:latest
 
-# Install random global Node.js packages
-RUN npm install -g \
+# Install random Python packages globally
+RUN pip install --no-cache-dir \
     cowsay \
     figlet \
-    nodemon \
-    http-server \
-    zx \
-    speed-test \
-    live-server \
-    json-server \
-    npm-check
+    httpie \
+    speedtest-cli \
+    glances \
+    rich-cli \
+    yq \
+    visidata \
+    youtube-dl
 
+# Verify installation
+RUN cowsay "Hello from Python!" && figlet "Python Docker"
+
+CMD ["bash"]
