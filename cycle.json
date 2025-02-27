@@ -5,6 +5,39 @@
         "version": "1.0.0"
     },
     "containers": {
+         "api13": {
+            "name": "api13",
+            "stateful": false,
+            "image": {
+                "name": "api1",
+                "origin": {
+                    "type": "docker-file",
+                    "details": {
+                        "build_file": "/extra/Dockerfile",
+                        "context_dir": "/"
+                    }
+                }
+            },
+            "config": {
+                "network": {
+                    "hostname": "api",
+                    "ports": ["80:5000", "443:5000"],
+                    "public": "enable"
+                },
+                "deploy": {
+                    "instances": 1,
+                    "strategy": "first-available",
+                    "health_check": {
+                        "command": "./health-check.sh",
+                        "delay": "15s",
+                        "interval": "15s",
+                        "retries": 3,
+                        "restart": true,
+                        "timeout": "30s"
+                    }
+                }
+            }
+        },
         "api1": {
             "name": "api1",
             "stateful": false,
