@@ -3,7 +3,6 @@ FROM ruby:latest
 # Install random Ruby gems globally
 RUN gem install \
     lolcat \
-    figlet \
     httparty \
     t \
     neofetch \
