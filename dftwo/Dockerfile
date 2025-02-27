@@ -6,7 +6,6 @@ RUN npm install -g \
     figlet \
     nodemon \
     http-server \
-    yarn \
     zx \
     speed-test \
     live-server \
